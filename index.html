@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>釜山旅行行程表 (2025年12月3-6日)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft JhengHei', 'PingFang TC', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 30px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .header p { font-size: 1.2em; opacity: 0.9; }
+        .buttons { text-align: center; margin-bottom: 30px; }
+        .btn { background: white; color: #667eea; border: none; padding: 15px 30px; font-size: 16px; font-weight: bold; border-radius: 25px; cursor: pointer; margin: 0 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+        .day-section { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .day-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 20px; border-radius: 10px; margin-bottom: 20px; }
+        .day-header h2 { font-size: 1.8em; margin-bottom: 5px; }
+        .day-header .date { font-size: 1.1em; opacity: 0.9; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { background: #f8f9fa; padding: 12px; text-align: left; font-weight: bold; color: #333; border-bottom: 2px solid #667eea; }
+        td { padding: 15px 12px; border-bottom: 1px solid #e9ecef; vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #f8f9fa; }
+        .time { font-weight: bold; color: #667eea; white-space: nowrap; min-width: 100px; }
+        .activity { color: #333; line-height: 1.6; }
+        .notes { color: #666; font-size: 0.95em; font-style: italic; line-height: 1.6; }
+        @media print { body { background: white; padding: 0; } .buttons { display: none; } .day-section { page-break-inside: avoid; box-shadow: none; border: 1px solid #ddd; } }
+        @media (max-width: 768px) { .header h1 { font-size: 1.8em; } .btn { padding: 12px 20px; font-size: 14px; margin: 5px; } table { font-size: 0.9em; } th, td { padding: 10px 8px; } }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✈️ 釜山旅行行程表 ✈️</h1>
+            <p>2025年12月3日（星期三）至 12月6日（星期六）</p>
+        </div>
+        <div class="buttons">
+            <button class="btn" onclick="window.print()">🖨️ 列印行程表</button>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <h2>第一天</h2>
+                <div class="date">12月3日（星期三）</div>
+            </div>
+            <table>
+                <thead><tr><th style="width: 120px">時間</th><th style="width: 40%">行程內容</th><th>備註</th></tr></thead>
+                <tbody>
+                    <tr><td class="time">06:00</td><td class="activity">早上出發去機場</td><td class="notes">-</td></tr>
+                    <tr><td class="time">抵達機場後</td><td class="activity">在候機室吃早餐</td><td class="notes">-</td></tr>
+                    <tr><td class="time">飛行中</td><td class="activity">坐了三個鐘頭飛機到達韓國釜山金山</td><td class="notes">-</td></tr>
+                    <tr><td class="time">抵達後</td><td class="activity">先去士丹福酒店放低行李</td><td class="notes">-</td></tr>
+                    <tr><td class="time">下午</td><td class="activity">出發去札嘎其魚市場</td><td class="notes">有很多蝦蟹類海鮮，買了皇帝蟹、海鮮湯材料，老闆娘送了很多海鮮</td></tr>
+                    <tr><td class="time">午餐</td><td class="activity">上二樓餐廳享用豐富海鮮餐</td><td class="notes">餐廳煮了一碗豐富的海鮮餐</td></tr>
+                    <tr><td class="time">晚上</td><td class="activity">行夜市及在便利店飲了熱蜜糖水</td><td class="notes">天氣非常冷</td></tr>
+                    <tr><td class="time">晚餐</td><td class="activity">再在酒吧餐廳吃炸雞、魚糕鍋和燒酒</td><td class="notes">第一晚的晚餐</td></tr>
+                    <tr><td class="time">夜晚</td><td class="activity">回酒店休息</td><td class="notes">-</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <h2>第二天</h2>
+                <div class="date">12月4日（星期四）</div>
+            </div>
+            <table>
+                <thead><tr><th>時間</th><th>行程內容</th><th>備註</th></tr></thead>
+                <tbody>
+                    <tr><td class="time">早上</td><td class="activity">行去雪濃湯餐廳</td><td class="notes">吃了豬肉湯飯、蒸餃，有免費咖啡</td></tr>
+                    <tr><td class="time">上午</td><td class="activity">行國際市場</td><td class="notes">買了睡衣、褲子、鞋</td></tr>
+                    <tr><td class="time">中午前</td><td class="activity">帶回酒店放低物品</td><td class="notes">-</td></tr>
+                    <tr><td class="time">下午</td><td class="activity">坐車去海雲台欣賞海景和行沙灘</td><td class="notes">-</td></tr>
+                    <tr><td class="time">午餐/下午</td><td class="activity">去了一間有名的醬油蟹餐廳</td><td class="notes">吃了醬油蟹、醬油蝦和藍蟹鍋，非常美味</td></tr>
+                    <tr><td class="time">傍晚</td><td class="activity">坐車回到南浦洞</td><td class="notes">-</td></tr>
+                    <tr><td class="time">晚上</td><td class="activity">去了樂天百貨、國際啤酒街音樂噴泉</td><td class="notes">在樂天超市買了六色筆和手信</td></tr>
+                    <tr><td class="time">回酒店途中</td><td class="activity">見到生果小販，買了韓國土多啤梨</td><td class="notes">-</td></tr>
+                    <tr><td class="time">晚餐</td><td class="activity">買了煎餃子和包回酒店吃</td><td class="notes">-</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                <h2>第三天</h2>
+                <div class="date">12月5日（星期五）</div>
+            </div>
+            <table>
+                <thead><tr><th>時間</th><th>行程內容</th><th>備註</th></tr></thead>
+                <tbody>
+                    <tr><td class="time">早上</td><td class="activity">坐車去甘川文化村</td><td class="notes">很多精品店和知書畫</td></tr>
+                    <tr><td class="time">上午</td><td class="activity">影了很多相</td><td class="notes">-</td></tr>
+                    <tr><td class="time">早餐</td><td class="activity">搭車到二樓咖啡店</td><td class="notes">吃西式早餐，飲了熱咖啡，欣賞風景</td></tr>
+                    <tr><td class="time">行完文化村後</td><td class="activity">坐車去龍頭山公園</td><td class="notes">-</td></tr>
+                    <tr><td class="time">午餐</td><td class="activity">去了濟州島家餐廳</td><td class="notes">吃了鮑魚湯、海膽拌飯及煎魚</td></tr>
+                    <tr><td class="time">午餐後</td><td class="activity">搭扶手電梯上公園，再去釜山塔</td><td class="notes">高空俯瞰釜山市景的美景，高空望到我們的酒店及魚市場</td></tr>
+                    <tr><td class="time">晚餐</td><td class="activity">坐車去魚市場，吃即炸鮮活盲鰻及炒飯</td><td class="notes">用芝蔴葉及包住鰻魚一起吃，很美味</td></tr>
+                    <tr><td class="time">晚上</td><td class="activity">行去生活百貨店</td><td class="notes">買了便宜的六色筆和小精品，然後我們再次買了韓國土多啤梨，回酒店吃</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                <h2>第四天</h2>
+                <div class="date">12月6日（星期六）</div>
+            </div>
+            <table>
+                <thead><tr><th>時間</th><th>行程內容</th><th>備註</th></tr></thead>
+                <tbody>
+                    <tr><td class="time">早上</td><td class="activity">在酒店對面的暑仔排骨湯餐廳吃早餐</td><td class="notes">吃了兩個大約暑仔排骨鍋及餃子，很滿足</td></tr>
+                    <tr><td class="time">早餐後</td><td class="activity">行去古來思魚餅店</td><td class="notes">買了很多魚餅</td></tr>
+                    <tr><td class="time">上午</td><td class="activity">回酒店收拾行李及坐車去釜山機場</td><td class="notes">-</td></tr>
+                    <tr><td class="time">中午</td><td class="activity">坐了大約四小時飛機</td><td class="notes">-</td></tr>
+                    <tr><td class="time">晚上6:00</td><td class="activity">到達香港國際機場</td><td class="notes">取了牛肉飯等後坐巴士回家</td></tr>
